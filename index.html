@@ -1,11 +1,11 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gowtham Chikkala | Cloud Backend Engineer</title>
+<title>Gowtham | Cloud Backend Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -14,7 +14,7 @@
 :root{
 --primary:#6366f1;
 --secondary:#06b6d4;
---dark:#0f172a;
+--dark:#020617;
 --glass:rgba(255,255,255,0.08);
 }
 
@@ -23,37 +23,32 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Poppins;
+scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#020617,#0f172a,#020617);
+background:linear-gradient(120deg,#020617,#0f172a,#020617);
 color:white;
-overflow-x:hidden;
 }
 
 /* navbar */
 
 nav{
 position:fixed;
-width:100%;
 top:0;
+width:100%;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
-padding:20px 8%;
-background:rgba(0,0,0,0.3);
+background:rgba(0,0,0,.4);
 backdrop-filter: blur(10px);
 z-index:1000;
 }
 
-nav h2{
-color:white;
-}
-
 nav a{
 color:white;
-text-decoration:none;
 margin-left:20px;
-font-weight:500;
+text-decoration:none;
 }
 
 /* hero */
@@ -66,24 +61,19 @@ justify-content:center;
 text-align:center;
 padding:20px;
 background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-url("https://images.unsplash.com/photo-1555066931-4365d14bab8c");
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
+url("https://images.unsplash.com/photo-1518770660439-4636190af475");
 background-size:cover;
 }
 
 .hero h1{
-font-size:3rem;
+font-size:3.2rem;
 }
 
 .highlight{
 background:linear-gradient(45deg,var(--primary),var(--secondary));
 -webkit-background-clip:text;
 color:transparent;
-}
-
-.hero p{
-margin-top:15px;
-opacity:.8;
 }
 
 .btn{
@@ -94,34 +84,15 @@ background:linear-gradient(45deg,var(--primary),var(--secondary));
 border-radius:8px;
 text-decoration:none;
 color:white;
-transition:.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
-}
-
-/* glass card */
-
-.glass{
-background:var(--glass);
-padding:25px;
-border-radius:15px;
-backdrop-filter: blur(10px);
-transition:.3s;
-}
-
-.glass:hover{
-transform:translateY(-5px);
 }
 
 /* section */
 
 section{
-padding:80px 8%;
+padding:90px 8%;
 }
 
-.section-title{
+.title{
 font-size:2rem;
 margin-bottom:30px;
 }
@@ -130,19 +101,32 @@ margin-bottom:30px;
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
 }
 
-/* skills */
+/* glass card */
 
-.skill{
-text-align:center;
+.card{
+background:var(--glass);
+padding:25px;
+border-radius:15px;
+backdrop-filter: blur(12px);
+transition:.3s;
 }
 
-.skill img{
-width:60px;
-margin-bottom:10px;
+.card:hover{
+transform:translateY(-6px) scale(1.02);
+}
+
+/* project image */
+
+.project img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+height:160px;
+object-fit:cover;
 }
 
 /* timeline */
@@ -152,19 +136,11 @@ border-left:2px solid var(--primary);
 padding-left:20px;
 }
 
-.timeline-item{
-margin-bottom:25px;
+.timeline div{
+margin-bottom:20px;
 }
 
-/* footer */
-
-footer{
-text-align:center;
-padding:40px;
-opacity:.7;
-}
-
-/* animation */
+/* fade animation */
 
 .fade{
 opacity:0;
@@ -177,6 +153,12 @@ opacity:1;
 transform:translateY(0);
 }
 
+footer{
+text-align:center;
+padding:40px;
+opacity:.7;
+}
+
 </style>
 
 </head>
@@ -184,13 +166,19 @@ transform:translateY(0);
 <body>
 
 <nav>
-<h2>Gowtham</h2>
+
+<h3>Gowtham</h3>
 
 <div>
+
+<a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
 <a href="#experience">Experience</a>
+<a href="#achievements">Achievements</a>
 <a href="#contact">Contact</a>
+
 </div>
 
 </nav>
@@ -200,18 +188,18 @@ transform:translateY(0);
 <div>
 
 <h1>
-Hi, I'm
-<span class="highlight">
 Gowtham
+<span class="highlight">
+Chikkala
 </span>
 </h1>
 
 <p>
-Cloud Backend Engineer | Java | Spring Boot | AWS | Kafka
+Cloud Backend Engineer | AWS | Spring Boot | Kafka | Golang
 </p>
 
-<a href="#contact" class="btn">
-Hire Me
+<a href="#" class="btn">
+Download Resume
 </a>
 
 </div>
@@ -220,21 +208,15 @@ Hire Me
 
 <section id="about" class="fade">
 
-<h2 class="section-title">
-About Me
+<h2 class="title">
+About
 </h2>
 
-<div class="glass">
+<div class="card">
 
-<p>
+Backend Engineer with 4+ years experience building microservices and cloud-native apps using Java Spring Boot, Kafka and AWS.
 
-Backend-focused Software Engineer with 4 years of experience building scalable microservices,
-REST APIs, and cloud-native applications using Spring Boot and AWS.
-
-Strong expertise in distributed systems, Kafka event streaming, MongoDB optimization,
-and Golang serverless components.
-
-</p>
+Passionate about scalable architecture, distributed systems and modern backend engineering.
 
 </div>
 
@@ -242,73 +224,60 @@ and Golang serverless components.
 
 <section id="skills" class="fade">
 
-<h2 class="section-title">
+<h2 class="title">
 Skills
 </h2>
 
 <div class="grid">
 
-<div class="glass skill">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
-
-<h3>Java</h3>
-
-</div>
-
-<div class="glass skill">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
-
-<h3>Spring Boot</h3>
+<div class="card">Java</div>
+<div class="card">Spring Boot</div>
+<div class="card">Kafka</div>
+<div class="card">AWS</div>
+<div class="card">MongoDB</div>
+<div class="card">Docker</div>
+<div class="card">Kubernetes</div>
+<div class="card">Golang</div>
 
 </div>
 
-<div class="glass skill">
+</section>
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+<section id="projects" class="fade">
 
-<h3>Docker</h3>
+<h2 class="title">
+Projects
+</h2>
 
-</div>
+<div class="grid">
 
-<div class="glass skill">
+<div class="card project">
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
 
-<h3>Kubernetes</h3>
+<h3>Encryption Library</h3>
 
-</div>
-
-<div class="glass skill">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-
-<h3>JavaScript</h3>
+Reusable AWS KMS encryption library used across services.
 
 </div>
 
-<div class="glass skill">
+<div class="card project">
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
 
-<h3>Golang</h3>
+<h3>Kafka Microservices</h3>
 
-</div>
-
-<div class="glass skill">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg">
-
-<h3>AWS</h3>
+Event-driven architecture using AWS MSK and Spring Boot.
 
 </div>
 
-<div class="glass skill">
+<div class="card project">
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
 
-<h3>React</h3>
+<h3>AI Architecture Generator</h3>
+
+Auto-generates architecture diagrams using metadata.
 
 </div>
 
@@ -318,38 +287,55 @@ Skills
 
 <section id="experience" class="fade">
 
-<h2 class="section-title">
+<h2 class="title">
 Experience
 </h2>
 
 <div class="timeline">
 
-<div class="timeline-item glass">
+<div class="card">
 
-<h3>
-Accenture
-</h3>
+<h3>Accenture</h3>
 
-<p>
-
-Built AWS KMS encryption library, Kafka-based microservices, Golang Lambda components,
-and Datadog observability tools.
-
-</p>
+Cloud microservices, AWS Lambda, Kafka integrations and Datadog monitoring.
 
 </div>
 
-<div class="timeline-item glass">
+<div class="card">
 
-<h3>
-TCS
-</h3>
+<h3>TCS</h3>
 
-<p>
+Banking backend microservices and CI/CD pipelines.
 
-Developed banking microservices, CI/CD pipelines, and resolved production issues using Splunk.
+</div>
 
-</p>
+</div>
+
+</section>
+
+<section id="achievements" class="fade">
+
+<h2 class="title">
+Achievements
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+Selected among 500+ engineers to visit UK client location.
+
+</div>
+
+<div class="card">
+
+Best Backend Developer among 130+ engineers.
+
+</div>
+
+<div class="card">
+
+Winner – Full Stack Hackathon
 
 </div>
 
@@ -359,23 +345,19 @@ Developed banking microservices, CI/CD pipelines, and resolved production issues
 
 <section id="contact" class="fade">
 
-<h2 class="section-title">
+<h2 class="title">
 Contact
 </h2>
 
-<div class="glass">
+<div class="card">
 
-<p>
 Email:
-gowthamviswaschikkala@gmail.coms
-</p>
+gowthamviswaschikkala@gmail.com
 
-<p>
+<br><br>
+
 LinkedIn:
-<a href="https://linkedin.com" target="_blank">
-View Profile
-</a>
-</p>
+https://linkedin.com
 
 </div>
 
@@ -383,33 +365,30 @@ View Profile
 
 <footer>
 
-<p>
-© 2026 Gowtham | Built with HTML CSS JS
-</p>
+Built with HTML CSS JS
 
 </footer>
 
 <script>
 
-const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver(entries=>{
 
-entries.forEach(entry => {
+entries.forEach(e=>{
 
-if(entry.isIntersecting){
+if(e.isIntersecting){
 
-entry.target.classList.add("show");
+e.target.classList.add("show")
 
 }
 
-});
+})
 
-});
+})
 
-document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+document.querySelectorAll(".fade").forEach(el=>observer.observe(el))
 
 </script>
 
 </body>
 
 </html>
-```
