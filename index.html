@@ -5,142 +5,106 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gowtham | Cloud Backend Engineer</title>
+<title>Gowtham Chikkala | Backend Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-:root{
---primary:#6366f1;
---secondary:#06b6d4;
---dark:#020617;
---glass:rgba(255,255,255,0.08);
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins;
-scroll-behavior:smooth;
-}
-
 body{
-background:linear-gradient(120deg,#020617,#0f172a,#020617);
+font-family:Inter;
+margin:0;
+background:#020617;
 color:white;
 }
 
-/* navbar */
+section{
+padding:80px 10%;
+}
+
+h1,h2{
+font-weight:700;
+}
 
 nav{
 position:fixed;
-top:0;
 width:100%;
-padding:18px 8%;
+background:rgba(0,0,0,.5);
+padding:15px 10%;
 display:flex;
 justify-content:space-between;
-background:rgba(0,0,0,.4);
-backdrop-filter: blur(10px);
-z-index:1000;
+backdrop-filter:blur(10px);
+z-index:100;
 }
 
 nav a{
 color:white;
-margin-left:20px;
 text-decoration:none;
+margin-left:20px;
 }
-
-/* hero */
 
 .hero{
 height:100vh;
 display:flex;
 align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
 background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
-url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),
+url("https://images.unsplash.com/photo-1451187580459-43490279c0fa");
 background-size:cover;
 }
 
 .hero h1{
-font-size:3.2rem;
+font-size:3rem;
 }
 
 .highlight{
-background:linear-gradient(45deg,var(--primary),var(--secondary));
--webkit-background-clip:text;
-color:transparent;
+color:#38bdf8;
 }
-
-.btn{
-margin-top:25px;
-display:inline-block;
-padding:12px 25px;
-background:linear-gradient(45deg,var(--primary),var(--secondary));
-border-radius:8px;
-text-decoration:none;
-color:white;
-}
-
-/* section */
-
-section{
-padding:90px 8%;
-}
-
-.title{
-font-size:2rem;
-margin-bottom:30px;
-}
-
-/* grid */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-}
-
-/* glass card */
 
 .card{
-background:var(--glass);
+background:rgba(255,255,255,.05);
 padding:25px;
-border-radius:15px;
-backdrop-filter: blur(12px);
+border-radius:12px;
+margin-bottom:20px;
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-6px) scale(1.02);
+transform:translateY(-5px);
 }
 
-/* project image */
-
-.project img{
-width:100%;
-border-radius:10px;
-margin-bottom:15px;
-height:160px;
-object-fit:cover;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
-/* timeline */
+.skill{
+text-align:center;
+padding:20px;
+}
+
+.skill img{
+width:50px;
+margin-bottom:10px;
+}
 
 .timeline{
-border-left:2px solid var(--primary);
+border-left:2px solid #38bdf8;
 padding-left:20px;
 }
 
-.timeline div{
-margin-bottom:20px;
+.timeline .card{
+margin-bottom:25px;
 }
 
-/* fade animation */
+.project img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:10px;
+}
 
 .fade{
 opacity:0;
@@ -171,12 +135,13 @@ opacity:.7;
 
 <div>
 
-<a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
+<a href="#architecture">Architecture</a>
 <a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
 <a href="#achievements">Achievements</a>
+<a href="#education">Education</a>
 <a href="#contact">Contact</a>
 
 </div>
@@ -188,19 +153,22 @@ opacity:.7;
 <div>
 
 <h1>
-Gowtham
+
+Cloud Backend Engineer
+
 <span class="highlight">
-Chikkala
+
+AWS • Kafka • Spring Boot
+
 </span>
+
 </h1>
 
 <p>
-Cloud Backend Engineer | AWS | Spring Boot | Kafka | Golang
-</p>
 
-<a href="#" class="btn">
-Download Resume
-</a>
+Building scalable distributed microservices and event driven platforms
+
+</p>
 
 </div>
 
@@ -208,15 +176,15 @@ Download Resume
 
 <section id="about" class="fade">
 
-<h2 class="title">
-About
-</h2>
+<h2>About</h2>
 
 <div class="card">
 
-Backend Engineer with 4+ years experience building microservices and cloud-native apps using Java Spring Boot, Kafka and AWS.
+Backend-focused Software Engineer with 4 years experience building scalable microservices using Java Spring Boot in cloud environments.
 
-Passionate about scalable architecture, distributed systems and modern backend engineering.
+Strong expertise in distributed systems, Kafka event streaming, MongoDB optimization, AWS Lambda, and Golang serverless components.
+
+Experience in observability using Datadog and building resilient architectures across multi-service ecosystems.
 
 </div>
 
@@ -224,60 +192,117 @@ Passionate about scalable architecture, distributed systems and modern backend e
 
 <section id="skills" class="fade">
 
-<h2 class="title">
-Skills
-</h2>
+<h2>Tech Stack</h2>
 
 <div class="grid">
 
-<div class="card">Java</div>
-<div class="card">Spring Boot</div>
-<div class="card">Kafka</div>
-<div class="card">AWS</div>
-<div class="card">MongoDB</div>
-<div class="card">Docker</div>
-<div class="card">Kubernetes</div>
-<div class="card">Golang</div>
+<div class="card skill">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
+
+Java
+
+</div>
+
+<div class="card skill">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
+
+Spring Boot
+
+</div>
+
+<div class="card skill">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg">
+
+Golang
+
+</div>
+
+<div class="card skill">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+
+JavaScript
+
+</div>
+
+<div class="card skill">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+
+React
+
+</div>
+
+<div class="card skill">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+
+Docker
+
+</div>
+
+<div class="card skill">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
+
+Kubernetes
+
+</div>
+
+<div class="card skill">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg">
+
+AWS
+
+</div>
 
 </div>
 
 </section>
 
-<section id="projects" class="fade">
+<section id="architecture" class="fade">
 
-<h2 class="title">
-Projects
-</h2>
+<h2>Architecture Expertise</h2>
 
 <div class="grid">
 
-<div class="card project">
+<div class="card">
 
-<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-
-<h3>Encryption Library</h3>
-
-Reusable AWS KMS encryption library used across services.
+Microservices Architecture
 
 </div>
 
-<div class="card project">
+<div class="card">
 
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
-
-<h3>Kafka Microservices</h3>
-
-Event-driven architecture using AWS MSK and Spring Boot.
+Event Driven Systems
 
 </div>
 
-<div class="card project">
+<div class="card">
 
-<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
+REST API Design
 
-<h3>AI Architecture Generator</h3>
+</div>
 
-Auto-generates architecture diagrams using metadata.
+<div class="card">
+
+Distributed Systems
+
+</div>
+
+<div class="card">
+
+CI/CD pipelines
+
+</div>
+
+<div class="card">
+
+TDD BDD Development
 
 </div>
 
@@ -287,9 +312,7 @@ Auto-generates architecture diagrams using metadata.
 
 <section id="experience" class="fade">
 
-<h2 class="title">
-Experience
-</h2>
+<h2>Experience</h2>
 
 <div class="timeline">
 
@@ -297,7 +320,19 @@ Experience
 
 <h3>Accenture</h3>
 
-Cloud microservices, AWS Lambda, Kafka integrations and Datadog monitoring.
+Developed AWS KMS based encryption library used across teams.
+
+Implemented Kafka event streaming architecture using AWS MSK.
+
+Optimized MongoDB queries using projections and Atlas search ranking.
+
+Developed Golang AWS Lambda components and cross account integrations.
+
+Configured Datadog monitoring and alerts.
+
+Handled production support and on call incident resolution.
+
+Participated in hackathons building AI architecture diagram generator.
 
 </div>
 
@@ -305,7 +340,57 @@ Cloud microservices, AWS Lambda, Kafka integrations and Datadog monitoring.
 
 <h3>TCS</h3>
 
-Banking backend microservices and CI/CD pipelines.
+Developed backend microservices in banking domain.
+
+Worked with relational and NoSQL databases.
+
+CI CD deployments using Jenkins and OpenShift.
+
+Debugged production issues using Splunk.
+
+Maintained code quality using SonarQube and Blackduck.
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects" class="fade">
+
+<h2>Key Work</h2>
+
+<div class="grid">
+
+<div class="card project">
+
+<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa">
+
+Encryption Library using AWS KMS abstraction
+
+</div>
+
+<div class="card project">
+
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
+
+Kafka event driven microservices
+
+</div>
+
+<div class="card project">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+
+AI architecture diagram generator
+
+</div>
+
+<div class="card project">
+
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+
+Datadog observability dashboards
 
 </div>
 
@@ -315,15 +400,13 @@ Banking backend microservices and CI/CD pipelines.
 
 <section id="achievements" class="fade">
 
-<h2 class="title">
-Achievements
-</h2>
+<h2>Achievements</h2>
 
 <div class="grid">
 
 <div class="card">
 
-Selected among 500+ engineers to visit UK client location.
+Selected among 500+ engineers for UK client visit.
 
 </div>
 
@@ -335,9 +418,31 @@ Best Backend Developer among 130+ engineers.
 
 <div class="card">
 
-Winner – Full Stack Hackathon
+Winner Full Stack Hackathon.
 
 </div>
+
+<div class="card">
+
+Winner Backend Hackathon.
+
+</div>
+
+</div>
+
+</section>
+
+<section id="education" class="fade">
+
+<h2>Education</h2>
+
+<div class="card">
+
+B.Tech Electronics and Communication Engineering
+
+Pondicherry Engineering College
+
+2018 – 2022
 
 </div>
 
@@ -345,19 +450,16 @@ Winner – Full Stack Hackathon
 
 <section id="contact" class="fade">
 
-<h2 class="title">
-Contact
-</h2>
+<h2>Contact</h2>
 
 <div class="card">
 
-Email:
-gowthamviswaschikkala@gmail.com
+Email: gowthamviswaschikkala@gmail.com
 
 <br><br>
 
 LinkedIn:
-https://linkedin.com
+https://linkedin.com/in/gowtham-viswas-ch-3107751a6/
 
 </div>
 
@@ -365,13 +467,13 @@ https://linkedin.com
 
 <footer>
 
-Built with HTML CSS JS
+Built with HTML CSS JS • GitHub Pages ready
 
 </footer>
 
 <script>
 
-const observer = new IntersectionObserver(entries=>{
+const observer=new IntersectionObserver(entries=>{
 
 entries.forEach(e=>{
 
